@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const width = window.innerWidth
+
+  if(width > 540){
+    return (
+      <div className="App">
+        <h1>please change to a mobile device</h1>
+      </div>
+    );
+  } else {
+    return (
+      <>
+      <h2>you are on a phone!</h2>
+      </>
+    )
+  }
+
+  
 }
 
 export default App;
